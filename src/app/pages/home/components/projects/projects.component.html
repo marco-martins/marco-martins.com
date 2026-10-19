@@ -1,0 +1,49 @@
+<section id="projects" class="personal-projects wrap section" aria-labelledby="projects-title">
+  <div class="section-label"><span class="dot"></span> 03 / PROJECTS & OPEN SOURCE</div>
+  <div class="section-heading">
+    <h2 id="projects-title">
+      IDEAS AND CHALLENGES.<br />
+      <span class="blue">REAL PROJECTS.</span>
+    </h2>
+    <p>
+      A selection of products and tools<br />
+      I’ve helped build.
+    </p>
+  </div>
+  <div class="personal-grid">
+    @for (item of items(); track item.id) {
+      <article class="personal-project">
+        <div class="project-thumbnail capture-preview wellocard-preview">
+          <!-- TODO: clean up with proper images -->
+          @if (item.image.src.endsWith('.svg')) {
+            <img [src]="item.image.src" [alt]="item.image.alt" loading="lazy" />
+          } @else {
+            <div class="capture-window">
+              <img [src]="item.image.src" [alt]="item.image.alt" loading="lazy" />
+            </div>
+          }
+          <div class="project-tint" aria-hidden="true"></div>
+        </div>
+        <div class="project-info">
+          <div class="personal-project-top">
+            <span class="project-type">{{ item.category }}</span>
+            <span class="skill-number">{{ $index + 1 | leadingZero }} /</span>
+          </div>
+          <h3>
+            <a [href]="item.url" target="_blank" rel="noopener noreferrer">
+              {{ item.name }}<span aria-hidden="true">↗</span>
+            </a>
+          </h3>
+          <p>{{ item.description }}</p>
+        </div>
+      </article>
+    }
+  </div>
+  <a
+    class="text-link github-link"
+    href="https://github.com/marco-martins"
+    target="_blank"
+    rel="noopener noreferrer"
+    >More on GitHub <span aria-hidden="true">↗</span></a
+  >
+</section>
