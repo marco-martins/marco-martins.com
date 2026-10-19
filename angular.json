@@ -8,7 +8,26 @@
   "projects": {
     "marco-martins": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "type": "component",
+          "style": "css",
+          "inlineStyle": true,
+          "prefix": "",
+          "exportDefault": true
+        },
+        "@schematics/angular:service": {
+          "type": "service"
+        },
+        "@schematics/angular:pipe": {
+          "typeSeparator": ".",
+          "flat": false
+        },
+        "@schematics/angular:directive": {
+          "type": "directive",
+          "flat": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
