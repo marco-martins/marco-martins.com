@@ -56,7 +56,7 @@ export class DataService {
         'Digital business cards with personalised links and QR codes, for sharing contact details online or in print.',
       url: 'https://wellocard.com',
       image: {
-        src: 'assets/project-wellocard-screen.jpg',
+        src: 'assets/project-wellocard.jpg',
         alt: 'WelloCard website with a digital business card displayed on a phone',
       },
     },
@@ -68,7 +68,7 @@ export class DataService {
         'Crypto portfolio management, with asset tracking, holdings and performance metrics in a single platform.',
       url: 'https://cryptostash.co/',
       image: {
-        src: 'assets/project-cryptostash-screen.jpg',
+        src: 'assets/project-cryptostash.jpg',
         alt: 'CryptoStash charts and holdings for a demo portfolio',
       },
     },
@@ -80,7 +80,7 @@ export class DataService {
         'Customisable dashboards with table and chart widgets connected to different data sources.',
       url: 'https://my-dashboards.com',
       image: {
-        src: 'assets/project-my-dashboards-screen.jpg',
+        src: 'assets/project-my-dashboards.jpg',
         alt: 'My Dashboards widgets, charts and desktop and mobile views',
       },
     },
@@ -92,7 +92,7 @@ export class DataService {
         'A real-time notification platform with a web dashboard, mobile app and public API for integrating alerts across applications.',
       url: 'https://bnotify.io',
       image: {
-        src: 'assets/project-bnotify.svg',
+        src: 'assets/project-bnotify.jpg',
         alt: 'Illustration of real-time notifications for bNotify',
       },
     },
@@ -104,7 +104,7 @@ export class DataService {
         'A JavaScript library for building HTML calendars and adapting them to styling frameworks such as Bootstrap or Tailwind.',
       url: 'https://www.npmjs.com/package/fast-calendar',
       image: {
-        src: 'assets/project-fast-calendar.svg',
+        src: 'assets/project-fast-calendar.jpg',
         alt: 'Calendar illustration for the Fast Calendar library',
       },
     },
@@ -116,7 +116,7 @@ export class DataService {
         'A lightweight Angular component for using and managing icons from the Line Awesome library.',
       url: 'https://www.npmjs.com/package/angular-line-awesome',
       image: {
-        src: 'assets/project-angular-line-awesome.svg',
+        src: 'assets/project-angular-line-awesome.jpg',
         alt: 'Icon illustration for the Angular Line Awesome component',
       },
     },

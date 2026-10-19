@@ -1,7 +1,8 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  imports: [],
+  imports: [NgOptimizedImage],
   selector: 'hero',
   styles: ``,
   templateUrl: './hero.component.html',

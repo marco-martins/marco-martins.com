@@ -1184,7 +1184,8 @@ h2 {
 }
 
 .project-thumbnail {
-  height: 156px;
+  position: relative;
+  height: 180px;
   background: #e6edfe;
   overflow: hidden;
   margin-bottom: 19px;
@@ -1195,18 +1196,7 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.project-thumbnail.thumbnail-logo {
-  background: #283148;
-  display: grid;
-  place-items: center;
-}
-
-.project-thumbnail.thumbnail-logo img {
-  width: 140px;
-  height: 140px;
-  object-fit: contain;
+  object-position: center top;
 }
 
 .project-info .personal-project-top {
@@ -1223,22 +1213,12 @@ h2 {
 
 @media (max-width: 720px) {
   .project-thumbnail {
-    height: 142px;
     margin-bottom: 17px;
-  }
-
-  .project-thumbnail.thumbnail-logo img {
-    width: 122px;
-    height: 122px;
   }
 
   .personal-grid {
     gap: 32px;
   }
-}
-
-.project-thumbnail img[src$=".svg"] {
-  object-fit: contain;
 }
 
 /* Equal-width project previews, three per row on desktop. */
@@ -1250,64 +1230,6 @@ h2 {
 .personal-project {
   grid-column: span 2;
   min-width: 0;
-}
-
-.open-source-project {
-  grid-column: span 2;
-}
-
-.capture-preview {
-  display: grid;
-  align-items: center;
-  position: relative;
-  background: #1e2432;
-}
-
-.capture-window {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.capture-preview .capture-window img {
-  position: absolute;
-  height: auto;
-  max-width: none;
-  object-fit: initial;
-}
-
-.wellocard-preview .capture-window {
-  aspect-ratio: 1358/763;
-}
-
-.wellocard-preview img {
-  width: 108.03%;
-  left: -3.53%;
-  top: -17.96%;
-}
-
-.dashboards-preview {
-  background: #f1f1f1;
-}
-
-.dashboards-preview .capture-window {
-  aspect-ratio: 1000/610;
-}
-
-.dashboards-preview img {
-  width: 151%;
-  left: -25.4%;
-  top: -62.3%;
-}
-
-.cryptostash-preview .capture-window {
-  aspect-ratio: 1975/1145;
-}
-
-.cryptostash-preview img {
-  width: 100%;
-  left: 0;
-  top: -9%;
 }
 
 @media (max-width: 1050px) and (min-width: 721px) {
@@ -1334,8 +1256,7 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .personal-project,
-  .open-source-project {
+  .personal-project {
     grid-column: auto;
   }
 }
@@ -1415,7 +1336,7 @@ h2 {
   inset: 0;
   z-index: 1;
   background: var(--blue);
-  opacity: 0.32;
+  opacity: 0.25;
   pointer-events: none;
   transition: opacity 0.25s ease;
 }
