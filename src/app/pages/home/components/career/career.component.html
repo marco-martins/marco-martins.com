@@ -1,0 +1,89 @@
+<section id="career" class="journey section" aria-labelledby="journey-title">
+  <div class="wrap">
+    <div class="section-label"><span class="dot"></span> 04 / PROFESSIONAL EXPERIENCE</div>
+    <div class="section-heading">
+      <h2 id="journey-title">
+        A CAREER BUILT<br />
+        ON <span class="blue">EXPERIENCE</span>.
+      </h2>
+      <p>
+        From software engineering<br />
+        to building products.
+      </p>
+    </div>
+
+    <ng-container *ngTemplateOutlet="timeline; context: { $implicit: recentPositions() }" />
+    @if (earlierPositions().length) {
+      <details class="earlier-career">
+        <summary>
+          <span>
+            The early years
+            <small>
+              {{ earlierPositions()[earlierPositions().length - 1].startDate | date: 'yyyy' }} —
+              {{
+                earlierPositions()[0].endDate
+                  ? (earlierPositions()[0].endDate | date: 'yyyy')
+                  : 'Present'
+              }}
+              · {{ earlierPositions().length }}
+              {{ earlierPositions().length === 1 ? 'role' : 'roles' }}
+            </small>
+          </span>
+          <span class="expand-symbol" aria-hidden="true">+</span>
+        </summary>
+        <ng-container *ngTemplateOutlet="timeline; context: { $implicit: earlierPositions() }" />
+      </details>
+    }
+
+    <ng-template #timeline let-positions>
+      <div class="timeline">
+        @for (item of positions; track item.id) {
+          <article class="timeline-row">
+            <div class="year">
+              {{ item.startDate | date: 'yyyy' }}
+              <span>{{ item.startDate | dateRange: item.endDate }}</span>
+            </div>
+            <div class="project">
+              <span class="project-type">
+                {{ item.role }}
+                @for (context of item.context; track $index) {
+                  · {{ context }}
+                }
+              </span>
+              <h3>{{ item.organization }}</h3>
+              <p>{{ item.description }}</p>
+              <div class="tags">
+                @for (tag of item.tags; track $index) {
+                  <span>{{ tag }}</span>
+                }
+              </div>
+            </div>
+            @if (item.url) {
+              <a
+                [href]="item.url"
+                class="project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                [attr.aria-label]="'Visit ' + item.organization + ' (opens in a new tab)'"
+                >↗</a
+              >
+            } @else {
+              <span class="role-marker" aria-hidden="true">↗</span>
+            }
+          </article>
+        }
+      </div>
+    </ng-template>
+
+    <div class="journey-footer">
+      <a
+        class="text-link"
+        href="https://www.linkedin.com/in/marcopmartins/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View LinkedIn profile <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
