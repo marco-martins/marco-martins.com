@@ -8,25 +8,25 @@ export class DataService {
   skills = signal<Skill[]>([
     {
       id: 'front-end-mobile',
-      title: 'Front-end & mobile',
+      title: 'Front-End & Mobile',
       description:
-        'Development of intuitive interfaces across devices, with attention to detail and performance.',
+        'Development of intuitive web and mobile interfaces, with attention to detail, accessibility and performance. Reusable components and consistent interactions that support a coherent user experience and simplify ongoing maintenance.',
       tagsLabel: 'Front-end and mobile technologies',
       tags: ['Angular', 'React', 'React Native', 'TypeScript', 'RxJS', 'Tailwind CSS'],
     },
     {
       id: 'backend-infraestrutura',
-      title: 'Backend & infrastructure',
+      title: 'Backend & Infrastructure',
       description:
-        'API development, data organisation, infrastructure setup and continuous integration for production applications.',
+        'API development, data organisation, infrastructure setup and continuous integration for production applications. Reliable backend services and repeatable deployment processes that keep applications running smoothly and make updates easier to deliver.',
       tagsLabel: 'Backend and infrastructure technologies',
       tags: ['Node.js', 'NestJS', 'REST APIs', 'PostgreSQL', 'NoSQL', 'Docker', 'Linux', 'CI/CD'],
     },
     {
       id: 'arquitetura-lideranca',
-      title: 'Architecture & leadership',
+      title: 'Architecture & Leadership',
       description:
-        'Technical solution design, project management and leadership of development teams, with a focus on quality and knowledge sharing.',
+        'Software architecture, project management and technical leadership, with a focus on code quality and knowledge sharing. Practical guidance, mentoring and code reviews that help teams make informed decisions and deliver maintainable software.',
       tagsLabel: 'Architecture and leadership skills',
       tags: [
         'Architecture',
@@ -39,9 +39,9 @@ export class DataService {
     },
     {
       id: 'produto-inovacao',
-      title: 'Product & innovation',
+      title: 'Product & Innovation',
       description:
-        'Development of SaaS, fintech and crypto products, and exploration of AI-powered solutions.',
+        'Development of SaaS, fintech and crypto products, alongside exploration of AI-powered solutions. Turning ideas into working applications, aligning technical decisions with user needs and refining features through feedback and real-world use.',
       tagsLabel: 'Product and innovation domains',
       tags: ['SaaS', 'Fintech', 'Crypto', 'AI'],
     },
@@ -51,9 +51,9 @@ export class DataService {
     {
       id: 'wellocard',
       name: 'WelloCard',
-      category: 'DIGITAL PRODUCT',
+      category: 'DIGITAL PRODUCT · DIGITAL BUSINESS CARDS',
       description:
-        'Digital business cards with personalised links and QR codes, for sharing contact details online or in print.',
+        'Digital business cards with personalised links and QR codes that make it easy to share contact details online or on printed materials.',
       url: 'https://wellocard.com',
       image: {
         src: 'assets/project-wellocard.jpg',
@@ -63,9 +63,9 @@ export class DataService {
     {
       id: 'cryptostash',
       name: 'CryptoStash',
-      category: 'DIGITAL PRODUCT · CRYPTO',
+      category: 'DIGITAL PRODUCT · CRYPTO PORTFOLIO',
       description:
-        'Crypto portfolio management, with asset tracking, holdings and performance metrics in a single platform.',
+        'A crypto portfolio platform that brings asset tracking, holdings, allocations, transactions and performance metrics together in one place.',
       url: 'https://cryptostash.co/',
       image: {
         src: 'assets/project-cryptostash.jpg',
@@ -77,7 +77,7 @@ export class DataService {
       name: 'My Dashboards',
       category: 'DIGITAL PRODUCT',
       description:
-        'Customisable dashboards with table and chart widgets connected to different data sources.',
+        'Personalised dashboards with a variety of widgets that can be added, arranged and customised to display information from different data sources.',
       url: 'https://my-dashboards.com',
       image: {
         src: 'assets/project-my-dashboards.jpg',
@@ -86,14 +86,14 @@ export class DataService {
     },
     {
       id: 'bnotify',
-      name: 'BNotify',
+      name: 'Bnotify',
       category: 'DIGITAL PRODUCT · NOTIFICATIONS',
       description:
         'A real-time notification platform with a web dashboard, mobile app and public API for integrating alerts across applications.',
       url: 'https://bnotify.io',
       image: {
         src: 'assets/project-bnotify.jpg',
-        alt: 'Illustration of real-time notifications for bNotify',
+        alt: 'Illustration of real-time notifications for Bnotify',
       },
     },
     {
@@ -101,7 +101,7 @@ export class DataService {
       name: 'Fast Calendar',
       category: 'OPEN SOURCE · NPM',
       description:
-        'A JavaScript library for building HTML calendars and adapting them to styling frameworks such as Bootstrap or Tailwind.',
+        'A JavaScript library for building HTML calendars with flexible styling to fit frameworks such as Bootstrap or Tailwind CSS.',
       url: 'https://www.npmjs.com/package/fast-calendar',
       image: {
         src: 'assets/project-fast-calendar.jpg',
@@ -113,7 +113,7 @@ export class DataService {
       name: 'Angular Line Awesome',
       category: 'OPEN SOURCE · NPM',
       description:
-        'A lightweight Angular component for using and managing icons from the Line Awesome library.',
+        'A lightweight Angular component that makes it easy to use icons from the Line Awesome library in Angular applications.',
       url: 'https://www.npmjs.com/package/angular-line-awesome',
       image: {
         src: 'assets/project-angular-line-awesome.jpg',
@@ -131,14 +131,14 @@ export class DataService {
       startDate: '2024-09-01',
       endDate: '2026-05-31',
       description:
-        'Development of a crypto portfolio management platform, from architecture to application. REST API, authentication, asset tracking, data infrastructure and deployment.',
+        'Development of a crypto portfolio management platform, from initial architecture to deployment. Work included the REST API, authentication, asset tracking and data infrastructure.',
       tags: ['Angular 20', 'NestJS', 'PostgreSQL', 'Docker'],
-      url: 'https://cryptostash.co/',
+      url: 'https://cryptostash.co',
     },
     {
       id: 'bnotify',
-      organization: 'BNotify',
-      role: 'SENIOR & FULL STACK DEVELOPER',
+      organization: 'Bnotify',
+      role: 'SENIOR FULL STACK DEVELOPER',
       context: [],
       startDate: '2022-11-01',
       endDate: '2024-12-31',
@@ -157,7 +157,7 @@ export class DataService {
       description:
         'Leadership of front-end development and architecture for a fintech platform. Angular applications, reusable components, financial data integration, code quality and developer mentoring.',
       tags: ['Angular', 'TypeScript', 'Sass', 'REST APIs'],
-      url: 'https://one-pm.com/',
+      url: 'https://first.li',
     },
     {
       id: 'teambook-sa',
@@ -202,9 +202,9 @@ export class DataService {
       startDate: '2011-06-01',
       endDate: '2011-12-31',
       description:
-        'Development of business websites and front-end applications in PHP, with responsive interfaces and contributions to cultural and digital platforms.',
+        'Development of business websites and PHP web applications, with responsive interfaces and contributions to cultural and digital platforms.',
       tags: ['PHP', 'HTML5', 'CSS3', 'MySQL'],
-      url: 'https://www.agap2.com/ti',
+      url: 'https://www.agap2.com',
     },
     {
       id: 'libertrium',
@@ -216,7 +216,7 @@ export class DataService {
       description:
         'Development of web applications and multimedia solutions, spanning front-end and backend work and interactive applications in Adobe Flex and AIR.',
       tags: ['PHP', 'HTML5', 'Adobe Flex', 'Adobe AIR'],
-      url: 'https://op.liberopinion.com/',
+      url: 'https://op.liberopinion.com',
     },
   ]);
 }
