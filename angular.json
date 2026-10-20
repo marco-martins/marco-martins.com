@@ -49,7 +49,12 @@
             "server": "src/main.server.ts",
             "outputMode": "server",
             "security": {
-              "allowedHosts": []
+              "allowedHosts": [
+                "localhost",
+                "127.0.0.1",
+                "marco-martins.com",
+                "www.marco-martins.com"
+              ]
             },
             "ssr": {
               "entry": "src/server.ts"
