@@ -6,10 +6,9 @@ services:
     image: marco-martins-website
     container_name: marco-martins-website
     ports:
-      - "${PORT:-4000}:4000"
+      - '${PORT:-4000}:4000'
     environment:
       NODE_ENV: production
-      PORT: "4000"
+      PORT: '4000'
     init: true
     restart: unless-stopped
-

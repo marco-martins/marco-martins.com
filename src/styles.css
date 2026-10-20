@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
   font-family: Barlow;
-  src: url("/assets/display.ttf") format("truetype");
+  src: url('/assets/display.ttf') format('truetype');
   font-style: normal;
   font-weight: 800;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: DM;
-  src: url("/assets/body.ttf") format("truetype");
+  src: url('/assets/body.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -21,7 +21,7 @@
   --muted: #60656d;
   --paper: #fafbf9;
   --line: #dbdfe4;
-  --display: Barlow, "Arial Narrow", Impact, sans-serif;
+  --display: Barlow, 'Arial Narrow', Impact, sans-serif;
   --body: DM, Arial, sans-serif;
 }
 
@@ -361,7 +361,7 @@ figure {
   margin-bottom: 42px;
 }
 
-.section-heading>p:not(.section-slogan) {
+.section-heading > p:not(.section-slogan) {
   font-size: 13px;
   line-height: 1.7;
   color: var(--muted);
@@ -466,7 +466,7 @@ figure {
   margin-top: 25px;
 }
 
-.journey-footer>span {
+.journey-footer > span {
   font-size: 9px;
   color: var(--muted);
 }
@@ -530,7 +530,7 @@ figure {
   font-size: clamp(36px, 4vw, 55px);
 }
 
-.contact .section-slogan>span {
+.contact .section-slogan > span {
   color: #b7ceff;
 }
 
@@ -568,13 +568,13 @@ figure {
   font-size: 23px;
 }
 
-.footer>p {
+.footer > p {
   font-size: 8px;
   letter-spacing: 0.8px;
   grid-row: 2;
 }
 
-.footer>a:not(.wordmark) {
+.footer > a:not(.wordmark) {
   font-size: 10px;
   grid-column: 2;
   grid-row: 1;
@@ -583,7 +583,7 @@ figure {
   text-align: right;
 }
 
-.footer>a span {
+.footer > a span {
   margin-left: 10px;
 }
 
@@ -678,7 +678,7 @@ figure {
     grid-template-columns: 1fr 2.5fr;
   }
 
-  .section-heading>p:not(.section-slogan) {
+  .section-heading > p:not(.section-slogan) {
     font-size: 11px;
   }
 
@@ -836,12 +836,12 @@ figure {
     margin-bottom: 27px;
   }
 
-  .section-heading>p:not(.section-slogan) {
+  .section-heading > p:not(.section-slogan) {
     margin-top: 18px;
     font-size: 12px;
   }
 
-  .section-heading>p:not(.section-slogan) br {
+  .section-heading > p:not(.section-slogan) br {
     display: none;
   }
 
@@ -906,7 +906,7 @@ figure {
     gap: 20px;
   }
 
-  .journey-footer>span {
+  .journey-footer > span {
     font-size: 8px;
   }
 
@@ -973,7 +973,7 @@ figure {
     font-size: 20px;
   }
 
-  .footer>p {
+  .footer > p {
     font-size: 6px;
   }
 
@@ -981,7 +981,7 @@ figure {
     font-size: 8px;
   }
 
-  .footer>a:not(.wordmark) {
+  .footer > a:not(.wordmark) {
     font-size: 9px;
   }
 }
@@ -1010,7 +1010,7 @@ figure {
   margin-bottom: 6px;
 }
 
-.education>span:last-child {
+.education > span:last-child {
   font-size: 11px;
   color: var(--muted);
   line-height: 1.8;
@@ -1115,7 +1115,7 @@ figure {
   color: var(--blue);
 }
 
-.personal-project h3 a>span {
+.personal-project h3 a > span {
   font-size: 24px;
   color: var(--blue);
 }
@@ -1145,7 +1145,7 @@ figure {
     font-size: 14px;
   }
 
-  .education>span:last-child {
+  .education > span:last-child {
     font-size: 10px;
   }
 
@@ -1535,7 +1535,7 @@ figure {
   color: var(--muted);
 }
 
-.header .language-option[aria-current="page"] {
+.header .language-option[aria-current='page'] {
   color: var(--blue);
   font-weight: 700;
 }
@@ -1544,7 +1544,7 @@ figure {
   color: var(--blue);
 }
 
-html[lang="en-GB"] .hero .hero-slogan {
+html[lang='en-GB'] .hero .hero-slogan {
   font-size: clamp(80px, 9.2vw, 132px);
 }
 
@@ -1557,13 +1557,13 @@ html[lang="en-GB"] .hero .hero-slogan {
     gap: 4px;
   }
 
-  html[lang="en-GB"] .hero .hero-slogan {
+  html[lang='en-GB'] .hero .hero-slogan {
     font-size: clamp(70px, 18vw, 125px);
   }
 }
 
 @media (max-width: 600px) {
-  html[lang="en-GB"] .hero .hero-slogan {
+  html[lang='en-GB'] .hero .hero-slogan {
     font-size: clamp(57px, 14.3vw, 86px);
   }
 }
@@ -1585,7 +1585,7 @@ html[lang="en-GB"] .hero .hero-slogan {
     margin: 0 0 20px;
   }
 
-  .hero-copy>.hero-slogan {
+  .hero-copy > .hero-slogan {
     grid-column: 1;
     grid-row: 2;
     align-self: center;
@@ -1624,7 +1624,7 @@ html[lang="en-GB"] .hero .hero-slogan {
     transform-origin: center 35%;
   }
 
-  .hero-copy>.underline {
+  .hero-copy > .underline {
     grid-column: 1;
     grid-row: 3;
     width: 130px;
@@ -1632,12 +1632,12 @@ html[lang="en-GB"] .hero .hero-slogan {
     margin: 4px 0 0 25px;
   }
 
-  .hero-copy>.hero-description,
-  .hero-copy>.button {
+  .hero-copy > .hero-description,
+  .hero-copy > .button {
     grid-column: 1/-1;
   }
 
-  .hero-copy>.button {
+  .hero-copy > .button {
     justify-self: start;
   }
 
@@ -1649,11 +1649,11 @@ html[lang="en-GB"] .hero .hero-slogan {
     margin-top: 18px;
   }
 
-  html[lang="en"] .hero .hero-slogan {
+  html[lang='en'] .hero .hero-slogan {
     font-size: clamp(38px, 11vw, 66px);
   }
 
-  html[lang="en"] .hero .portrait-image {
+  html[lang='en'] .hero .portrait-image {
     height: calc(clamp(38px, 11vw, 66px) * 1.92);
   }
 }
