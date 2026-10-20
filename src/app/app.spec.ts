@@ -1,12 +1,17 @@
 import { TestBed } from '@angular/core/testing';
 import { App } from './app';
+import { vi } from 'vitest';
+import { PlausibleService } from './services/plausible.service';
 
 describe('App', () => {
+  const plausible = { init: vi.fn().mockResolvedValue(undefined) };
+
   beforeEach(async () => {
+    plausible.init.mockClear();
     await TestBed.configureTestingModule({
       imports: [App],
-    })
-      .compileComponents();
+      providers: [{ provide: PlausibleService, useValue: plausible }],
+    }).compileComponents();
   });
 
   it('should create the app', () => {
@@ -15,10 +20,12 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render title', async () => {
+  it('initializes Plausible after rendering', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, marco-martins');
+    expect(plausible.init).toHaveBeenCalledExactlyOnceWith(
+      'marco-martins.com',
+      'https://plausible.marco-martins.com/api/event',
+    );
   });
 });
