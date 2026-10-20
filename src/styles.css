@@ -165,6 +165,9 @@ a:focus-visible {
 }
 
 .hero-intro {
+  font-family: var(--body);
+  font-weight: 400;
+  text-transform: uppercase;
   margin: 0 0 27px;
 }
 
@@ -176,21 +179,21 @@ figure {
   margin: 0;
 }
 
-h1,
-h2 {
+.hero-slogan,
+.section-slogan {
   font-family: var(--display);
   font-weight: 800;
   text-transform: uppercase;
 }
 
-h1 {
+.hero-slogan {
   font-size: clamp(90px, 10.7vw, 154px);
   letter-spacing: -3.5px;
   line-height: 0.87;
   white-space: nowrap;
 }
 
-h1 span {
+.hero-slogan span {
   color: var(--blue);
 }
 
@@ -292,6 +295,7 @@ h1 span {
   align-items: center;
   gap: 10px;
   font-size: 10px;
+  font-weight: 400;
   letter-spacing: 1.1px;
   margin-bottom: 26px;
 }
@@ -312,7 +316,7 @@ h1 span {
   margin-top: 8px;
 }
 
-h2 {
+.section-slogan {
   font-size: clamp(36px, 4.1vw, 57px);
   line-height: 1.01;
   letter-spacing: -0.7px;
@@ -357,7 +361,7 @@ h2 {
   margin-bottom: 42px;
 }
 
-.section-heading>p {
+.section-heading>p:not(.section-slogan) {
   font-size: 13px;
   line-height: 1.7;
   color: var(--muted);
@@ -522,11 +526,11 @@ h2 {
   color: #d3e0ff;
 }
 
-.contact h2 {
+.contact .section-slogan {
   font-size: clamp(36px, 4vw, 55px);
 }
 
-.contact h2>span {
+.contact .section-slogan>span {
   color: #b7ceff;
 }
 
@@ -595,9 +599,11 @@ h2 {
 }
 
 .skip-link {
-  position: absolute;
+  position: fixed;
   left: 20px;
-  top: -60px;
+  top: 10px;
+  transform: translateY(calc(-100% - 20px));
+  max-width: calc(100% - 40px);
   padding: 12px;
   background: var(--blue);
   color: white;
@@ -605,11 +611,11 @@ h2 {
 }
 
 .skip-link:focus {
-  top: 10px;
+  transform: translateY(0);
 }
 
 @media (min-width: 1500px) {
-  h1 {
+  .hero-slogan {
     font-size: 158px;
   }
 
@@ -637,7 +643,7 @@ h2 {
     gap: 22px;
   }
 
-  h1 {
+  .hero-slogan {
     font-size: 11.2vw;
     letter-spacing: -2px;
   }
@@ -672,7 +678,7 @@ h2 {
     grid-template-columns: 1fr 2.5fr;
   }
 
-  .section-heading>p {
+  .section-heading>p:not(.section-slogan) {
     font-size: 11px;
   }
 
@@ -733,7 +739,7 @@ h2 {
     margin-bottom: 24px;
   }
 
-  h1 {
+  .hero-slogan {
     font-size: clamp(84px, 20.7vw, 145px);
     letter-spacing: -2px;
   }
@@ -810,7 +816,7 @@ h2 {
     margin-top: 0;
   }
 
-  h2 {
+  .section-slogan {
     font-size: 38px;
   }
 
@@ -830,12 +836,12 @@ h2 {
     margin-bottom: 27px;
   }
 
-  .section-heading>p {
+  .section-heading>p:not(.section-slogan) {
     margin-top: 18px;
     font-size: 12px;
   }
 
-  .section-heading>p br {
+  .section-heading>p:not(.section-slogan) br {
     display: none;
   }
 
@@ -938,7 +944,7 @@ h2 {
     display: block;
   }
 
-  .contact h2 {
+  .contact .section-slogan {
     font-size: 37px;
   }
 
@@ -1009,6 +1015,11 @@ h2 {
   color: var(--muted);
   line-height: 1.8;
   display: block;
+}
+
+.education a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .role-marker {
@@ -1474,7 +1485,7 @@ h2 {
     margin-bottom: 18px;
   }
 
-  .hero h1 {
+  .hero .hero-slogan {
     font-size: clamp(67px, 16.56vw, 100px);
     letter-spacing: -1.6px;
   }
@@ -1533,7 +1544,7 @@ h2 {
   color: var(--blue);
 }
 
-html[lang="en-GB"] .hero h1 {
+html[lang="en-GB"] .hero .hero-slogan {
   font-size: clamp(80px, 9.2vw, 132px);
 }
 
@@ -1546,13 +1557,13 @@ html[lang="en-GB"] .hero h1 {
     gap: 4px;
   }
 
-  html[lang="en-GB"] .hero h1 {
+  html[lang="en-GB"] .hero .hero-slogan {
     font-size: clamp(70px, 18vw, 125px);
   }
 }
 
 @media (max-width: 600px) {
-  html[lang="en-GB"] .hero h1 {
+  html[lang="en-GB"] .hero .hero-slogan {
     font-size: clamp(57px, 14.3vw, 86px);
   }
 }
@@ -1560,7 +1571,7 @@ html[lang="en-GB"] .hero h1 {
 /* Mobile and small-tablet hero: headline and portrait side by side. */
 @media (max-width: 720px) {
   .hero {
-    grid-template-columns: minmax(0, 1fr) clamp(100px, 30vw, 150px);
+    grid-template-columns: minmax(0, 1fr) clamp(110px, 33vw, 165px);
     column-gap: 14px;
   }
 
@@ -1574,7 +1585,7 @@ html[lang="en-GB"] .hero h1 {
     margin: 0 0 20px;
   }
 
-  .hero-copy>h1 {
+  .hero-copy>.hero-slogan {
     grid-column: 1;
     grid-row: 2;
     align-self: center;
@@ -1603,7 +1614,7 @@ html[lang="en-GB"] .hero h1 {
     grid-row: 2;
     align-self: center;
     width: 100%;
-    height: calc(clamp(43px, 13.1vw, 78px) * 1.74);
+    height: calc(clamp(43px, 13.1vw, 78px) * 1.92);
     aspect-ratio: auto;
   }
 
@@ -1638,12 +1649,12 @@ html[lang="en-GB"] .hero h1 {
     margin-top: 18px;
   }
 
-  html[lang="en"] .hero h1 {
+  html[lang="en"] .hero .hero-slogan {
     font-size: clamp(38px, 11vw, 66px);
   }
 
   html[lang="en"] .hero .portrait-image {
-    height: calc(clamp(38px, 11vw, 66px) * 1.74);
+    height: calc(clamp(38px, 11vw, 66px) * 1.92);
   }
 }
 

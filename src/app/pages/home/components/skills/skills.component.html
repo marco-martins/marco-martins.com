@@ -1,10 +1,12 @@
 <section id="skills" class="expertise wrap section" aria-labelledby="expertise-title">
-  <div class="section-label"><span class="dot"></span> 02 / SKILLS</div>
+  <h2 id="expertise-title" class="section-label">
+    <span class="dot"></span> 02 / TECHNICAL SKILLS
+  </h2>
   <div class="section-heading">
-    <h2 id="expertise-title">
+    <p class="section-slogan">
       PRODUCT VISION.<br />
       <span class="blue">TECHNICAL FOUNDATION.</span>
-    </h2>
+    </p>
     <p>
       Architecture, code and collaboration.<br />
       From concept to production.
@@ -16,7 +18,7 @@
         <span class="skill-number">{{ $index + 1 | leadingZero }} /</span>
         <h3>{{ item.title }}</h3>
         <p>{{ item.description }}</p>
-        <ul class="skill-tags" aria-label="Front-end and mobile technologies">
+        <ul class="skill-tags" [attr.aria-label]="item.tagsLabel">
           @for (tag of item.tags; track $index) {
             <li>{{ tag }}</li>
           }

@@ -20,6 +20,20 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
+  it('places a skip link before navigation and targets a focusable main region', async () => {
+    const fixture = TestBed.createComponent(App);
+    await fixture.whenStable();
+    const element: HTMLElement = fixture.nativeElement;
+    const skipLink = element.querySelector('a');
+    const main = element.querySelector('main');
+
+    expect(skipLink?.textContent).toBe('Skip to content');
+    expect(skipLink?.getAttribute('href')).toBe(`#${main?.id}`);
+    expect(main?.getAttribute('tabindex')).toBe('-1');
+    expect(main?.querySelector('header, footer')).toBeNull();
+    expect(main?.querySelector('router-outlet')).not.toBeNull();
+  });
+
   it('initializes Plausible after rendering', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
